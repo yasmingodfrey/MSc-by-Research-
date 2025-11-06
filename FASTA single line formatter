@@ -1,0 +1,19 @@
+#!/bin/bash			
+			
+INPUT_FILE="proteins.fasta"       # Input FASTA file			
+OUTPUT_FILE="fullfastaproteinseqs" # Output FASTA file with sequences in one line			
+			
+awk '			
+    /^>/ {			
+        if (seq) {			
+            print seq			
+        }			
+        print $0			
+        seq=""			
+        next			
+    }			
+    { seq = seq $0 }			
+    END { if(seq) print seq }			
+' "$INPUT_FILE" > "$OUTPUT_FILE"			
+			
+echo "✅ Done! Sequences are now single-line in $OUTPUT_FILE"			

@@ -1,7 +1,7 @@
 #!/bin/bash			
 			
-INPUT_FILE="proteins.fasta"       # Input FASTA file			
-OUTPUT_FILE="fullfastaproteinseqs" # Output FASTA file with sequences in one line			
+INPUT_FILE="example_protein_fastas.txt"       # Input FASTA file			
+OUTPUT_FILE="example_protein_fastas_formatted.txt" # Output FASTA file with sequences in one line			
 			
 awk '			
     /^>/ {			

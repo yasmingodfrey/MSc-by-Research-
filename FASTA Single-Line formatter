@@ -16,4 +16,4 @@ awk '
     END { if(seq) print seq }			
 ' "$INPUT_FILE" > "$OUTPUT_FILE"			
 			
-echo "✅ Done! Sequences are now single-line in $OUTPUT_FILE"			
+echo "Done! Sequences are now single-line in $OUTPUT_FILE"			

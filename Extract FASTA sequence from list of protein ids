@@ -31,4 +31,4 @@ while read -r ID; do
     sleep 0.2				
 done < "$INPUT_FILE"				
 				
-echo "✅ Finished! Output written to $OUTPUT_FILE"				
+echo "Finished! Output written to $OUTPUT_FILE"				

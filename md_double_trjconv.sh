@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir="134_7"
+dir="134_7" # change this 
 
 cd "$dir/gromacs" || {
     echo "Directory $dir/gromacs not found"

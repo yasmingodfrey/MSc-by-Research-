@@ -2,7 +2,7 @@
 
 CA_GROUP=3
 LIG_GROUP=13
-dir="134_7"
+dir="134_7" # change this 
 
 cd "$dir/gromacs" || {
     echo "Directory $dir/gromacs not found"

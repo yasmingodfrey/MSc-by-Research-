@@ -32,6 +32,19 @@ This page includes all the scripts used in the first two phases of my project.
 
     md_equilibrate.sh 
 
-  
+  Bash script to prepare production MD run in GROMACs from charmm-gui systems. 
+
+  This script: 
+  (1) Loops through all system directories 
+  (2) Enters each gromacs/ folder 
+  (3) Runs the CHARMM-GUI solvent setup script
+  (4) Generates three production input files (md_1.tpr, md_2.tpr, md_3.tpr) using gmx grompp
+
+  It automates the transition from: step4.1_equilibration.gro → step5_production.mdp
+
+  Requirements
+  (1) GROMACS (gmx) installed
+  (2) CHARMM-GUI generated directory structure
+  (3) Valid path to: ~/MM_KIT/CHARMM/run_charmm_gui.soluble.csh
 
   

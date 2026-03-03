@@ -27,12 +27,16 @@ This page includes all the scripts used in the first two phases of my project.
     boltz_run_multi. sh 
 
   This script runs all .yaml files in Boltz-2. 
+  
   Boltz-2 must be installed for this script. 
 
     gnina_rescore.sh 
 
+  This script...
 
     gnina_redock.sh 
+
+  This script... 
 
   PHASE 2: MD simulations 
 

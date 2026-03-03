@@ -26,17 +26,31 @@ This page includes all the scripts used in the first two phases of my project.
 
     boltz_run_multi. sh 
 
-  This script runs all .yaml files in Boltz-2. 
+  This script runs all .yaml files in Boltz-2. Boltz-2 is an AI co-folding software which predicts and scores the protein-ligand model. 
+
+  Input: see boltz_example.yaml 
+  
+  Output: Predicted model PDB and Scores: Affinity, Binary, and iPTM.   
   
   Boltz-2 must be installed for this script. 
 
     gnina_rescore.sh 
 
-  This script...
+  This script scores the Boltz-2 model using GNINA. This allows further evaluation of the Boltz-2 prediction using more traditional scoring metrics. 
+
+  How this script works: (1) It splits the Boltz-2 model into protein.pdb and ligand.pdb. (2) Uses obabel to turn the ligand .pdb into .cif to comply to GNINA input requirements. (3) Scores the Boltz pose using its own metrics (--only_score applied) 
+
+  Input: Boltz-2 output model PDB 
+
+  Output: Minimised afinity score and CNN score 
+
+  GNINA must be installed for this script. 
 
     gnina_redock.sh 
 
-  This script... 
+  This script redocks the Boltz-2 prediction. Docking is more physics based compared to AI which is based on training data. 
+  
+  How it works: (1) It takes the Boltz-2 PDB and splits the protein and ligand into seperate PDBs. (2) Uses obabel to turn the ligand.pdb into .cif to comply to GNINA input requirements. (3) Re-docks the ligand to the protein, using --auto_box to define the docking box around the original Boltz-2 prediction. 
 
   PHASE 2: MD simulations 
 

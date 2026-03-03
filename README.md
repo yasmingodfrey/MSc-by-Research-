@@ -73,4 +73,14 @@ This page includes all the scripts used in the first two phases of my project.
   (2) CHARMM-GUI generated directory structure
   (3) Valid path to: ~/MM_KIT/CHARMM/run_charmm_gui.soluble.csh
 
+    md_run_multi.sh 
+
+  This script runs the three input files produced in the previous script for 10ns using GROMACs. 
+
+  Input: md_X.tpr 
+  
+  Output: etc etc etc  
+
+  
+
   

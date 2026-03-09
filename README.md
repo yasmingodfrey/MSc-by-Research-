@@ -77,7 +77,7 @@ This page includes all the scripts used in the first two phases of my project.
 
   This script runs the three input files produced in the previous script for 10ns using GROMACs. 
 
-  Input: md_X.tpr 
+  Input: md_X.tpr (X = 1-3) 
   
   Output: etc etc etc  
 
